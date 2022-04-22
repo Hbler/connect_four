@@ -45,3 +45,4 @@ class Cell {
 }
 
 //// Export
+export { Cell };
