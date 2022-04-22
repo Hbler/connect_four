@@ -13,6 +13,7 @@ function prepareLayout() {
   title.innerText = "OOP Study: Connect Four Game";
   subT.innerText = "Hugo Bler";
   table.id = "table";
+  table.classList.add("seven_six");
 
   Header.append(title, subT);
   Main.append(table);

@@ -1,14 +1,10 @@
 class Board {
-  _cols;
-  _rows;
-  _players;
   constructor(cols, rows, players) {
     this._cols = cols;
     this._rows = rows;
     this._players = players;
-    this._currentPlayer = this._players[0];
-    this._map = createEmptyMap();
-    this._buildBoard();
+    // this._currentPlayer = this._players[0];
+    this._map = this.createEmptyMap();
   }
 
   // getters
@@ -59,5 +55,30 @@ class Board {
     return map;
   }
 
-  buildBoard() {}
+  buildBoard(node) {
+    node.innerHTML = "";
+
+    for (let c = 0; c < this.columns; c++) {
+      const column = document.createElement("div");
+      column.classList.add("column");
+      column.style.width = `${100 / this._cols - 0.7}%`;
+      column.dataset.column = c;
+      column.addEventListener("click", () => {
+        "Adicionaremos uma função de click futuramente";
+      });
+
+      for (let r = 0; r < this.rows; r++) {
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.style.height = `${100 / this._rows - 0.7}%`;
+        cell.dataset.row = r;
+        column.appendChild(cell);
+      }
+
+      node.appendChild(column);
+    }
+  }
 }
+
+//// Export
+export { Board };
