@@ -33,9 +33,10 @@ class Cell {
 
   render() {
     const div = document.querySelector(
-      `.column[data-column="${this._col}"] > .cell[data-row="${this._row - 1}"]`
+      `.column[data-column="${this.column}"] > .cell[data-row="${
+        this._row - 1
+      }"]`
     );
-
     div.innerText = "";
 
     const playerDiv = document.createElement("div");
