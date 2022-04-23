@@ -27,6 +27,11 @@ header {
   box-sizing: border-box;
 }
 
+header a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
 /* MAIN */
 
 main {

@@ -29,16 +29,19 @@ function createModal() {
 
 function prepareLayout() {
   const title = document.createElement("h1");
+  const link = document.createElement("a");
   const subT = document.createElement("h2");
   const table = document.createElement("section");
   const ui = createUI();
 
   title.innerText = "OOP Study: Connect Four Game";
+  link.href = "https://linkedin.com/in/hbler/";
   subT.innerText = "Hugo Bler";
   table.id = "table";
   table.classList.add("seven_six");
 
-  Header.append(title, subT);
+  link.appendChild(subT);
+  Header.append(title, link);
   Main.append(ui, table);
   body.append(Header, Main, Modal);
 }
