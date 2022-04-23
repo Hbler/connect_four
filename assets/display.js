@@ -36,6 +36,7 @@ function prepareLayout() {
 
   title.innerText = "OOP Study: Connect Four Game";
   link.href = "https://linkedin.com/in/hbler/";
+  link.target = "_blank";
   subT.innerText = "Hugo Bler";
   table.id = "table";
   table.classList.add("seven_six");
